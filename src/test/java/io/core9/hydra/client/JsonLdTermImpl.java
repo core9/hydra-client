@@ -8,6 +8,9 @@ public class JsonLdTermImpl implements JsonLdTerm {
 	public JsonLdTermImpl(String term, String iri) {
 
 	}
+	public JsonLdTermImpl(String term, String id, String type) {
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	public JsonLdContext getContext() {
 		return context;

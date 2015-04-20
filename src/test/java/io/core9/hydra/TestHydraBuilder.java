@@ -15,6 +15,10 @@ public class TestHydraBuilder {
 
 		ApiDocumentation apiDocumentation = new ApiDocumentationImpl();
 
+		apiDocumentation.setTitle("Subscription Api");
+		apiDocumentation.setDescription("Api to manage subscriptions");
+
+		apiDocumentation.setId("http://localhost/test/vocab");
 
 
 		JSONObject apiDoc = apiDocumentation.toJson();

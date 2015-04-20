@@ -1,5 +1,7 @@
 package io.core9.hydra.client;
 
+import java.util.List;
+
 import net.minidev.json.JSONObject;
 
 public interface ApiDocumentation {
@@ -20,9 +22,7 @@ public interface ApiDocumentation {
 
 	void setDescription(String description);
 
-	SupportedClasses getSupportedClasses();
 
-	void addSupportedClass(SupportedClasses supportedClass);
 
 	StatusCodes getStatusCodes();
 
@@ -34,6 +34,9 @@ public interface ApiDocumentation {
 
 	String getType();
 
-	void setType(String type);
+	List<SupportedClass> getSupportedClasses();
+
+	void addSupportedClass(SupportedClass supportedClass);
+
 
 }
