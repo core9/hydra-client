@@ -2,6 +2,12 @@ package io.core9.hydra.client;
 
 public class JsonLdContextImpl implements JsonLdContext {
 
+	public JsonLdContextImpl(String context, String iri) {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	@Override
 	public void addTerm(JsonLdTerm jsonLdTerm) {
 		// TODO Auto-generated method stub
