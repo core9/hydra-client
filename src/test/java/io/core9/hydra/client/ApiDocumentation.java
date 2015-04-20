@@ -12,8 +12,6 @@ public interface ApiDocumentation {
 
 	HydraEntryPoint getEntryPoint();
 
-	void setEntryPoint(HydraEntryPoint entryPoint);
-
 	String getTitle();
 
 	void setTitle(String title);

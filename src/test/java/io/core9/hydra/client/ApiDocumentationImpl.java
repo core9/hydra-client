@@ -4,7 +4,7 @@ import net.minidev.json.JSONObject;
 
 public class ApiDocumentationImpl implements ApiDocumentation {
 
-	private JsonLdContext context;
+	private JsonLdContext context = new JsonLdContextImpl();
 	private HydraEntryPoint entryPoint;
 
 	private String title;
@@ -19,8 +19,8 @@ public class ApiDocumentationImpl implements ApiDocumentation {
 
 	public ApiDocumentationImpl() {
 
-		context = new JsonLdContextImpl();
 		context.addTerm(new JsonLdTermImpl("hydra", "http://www.w3.org/ns/hydra/core#"));
+		context.addTerm(new JsonLdTermImpl("supportedClass", "hydra:supportedClass"));
 
 	}
 
@@ -39,10 +39,6 @@ public class ApiDocumentationImpl implements ApiDocumentation {
 		return entryPoint;
 	}
 
-	@Override
-	public void setEntryPoint(HydraEntryPoint entryPoint) {
-		this.entryPoint = entryPoint;
-	}
 
 	@Override
 	public String getTitle() {
