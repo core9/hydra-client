@@ -1,0 +1,14 @@
+{
+    "@context": {
+        "hydra": "http://www.w3.org/ns/hydra/core#",
+        "vocab": "http://www.markus-lanthaler.com/hydra/api-demo/vocab#",
+        "User": "vocab:User",
+        "name": "vocab:User/name",
+        "email": "vocab:User/email",
+        "password": "vocab:User/password",
+        "raised_issues": {
+            "@id": "vocab:User/raisedIssues",
+            "@type": "@id"
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "@context": "/hydra/api-demo/contexts/Collection.jsonld",
+    "@type": "Collection",
+    "@id": "http://www.markus-lanthaler.com/hydra/api-demo/issues/",
+    "members": [
+        {
+            "@id": "/hydra/api-demo/issues/2",
+            "@type": "vocab:Issue"
+        },
+        {
+            "@id": "/hydra/api-demo/issues/3",
+            "@type": "vocab:Issue"
+        },
+        {
+            "@id": "/hydra/api-demo/issues/4",
+            "@type": "vocab:Issue"
+        },
+        {
+            "@id": "/hydra/api-demo/issues/5",
+            "@type": "vocab:Issue"
+        },
+        {
+            "@id": "/hydra/api-demo/issues/6",
+            "@type": "vocab:Issue"
+        },
+        {
+            "@id": "/hydra/api-demo/issues/7",
+            "@type": "vocab:Issue"
+        },
+        {
+            "@id": "/hydra/api-demo/issues/8",
+            "@type": "vocab:Issue"
+        },
+        {
+            "@id": "/hydra/api-demo/issues/9",
+            "@type": "vocab:Issue"
+        },
+        {
+            "@id": "/hydra/api-demo/issues/10",
+            "@type": "vocab:Issue"
+        },
+        {
+            "@id": "/hydra/api-demo/issues/11",
+            "@type": "vocab:Issue"
+        }
+    ]
+}

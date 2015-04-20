@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "hydra": "http://www.w3.org/ns/hydra/core#",
+        "vocab": "http://www.markus-lanthaler.com/hydra/api-demo/vocab#",
+        "Issue": "vocab:Issue",
+        "title": "vocab:Issue/title",
+        "description": "vocab:Issue/description",
+        "is_open": "vocab:isOpen",
+        "raised_by": {
+            "@id": "vocab:Issue/raisedBy",
+            "@type": "@id"
+        },
+        "created_at": {
+            "@id": "vocab:Issue/createdAt",
+            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "comments": {
+            "@id": "vocab:Issue/comments",
+            "@type": "@id"
+        }
+    }
+}

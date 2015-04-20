@@ -1,0 +1,61 @@
+// Core9 Framework: module-logger
+// Build with: ./gradlew clean test build
+// Publish with  ./gradlew clean test build publish publishBintray
+
+apply from: 'http://www.core9.io/buildfiles/gradle/source.gradle'
+apply from: 'http://www.core9.io/buildfiles/gradle/publish.gradle'
+
+buildscript { apply from: 'http://www.core9.io/buildfiles/gradle/publish-build.gradle' }
+
+/**
+ * @TODO Somehow cannot be moved to publish.gradle need to bump
+ * bump
+ */
+task publishBintray (type: org._10ne.gradle.rest.RestTask, dependsOn: bintrayUpload) {
+	httpMethod = 'post'
+	uri = 'https://bintray.com/api/v1/content/core9/core9/' + project.name + '/' + project.version + '/publish'
+	username = System.env.BINTRAY_USER
+	password = System.env.BINTRAY_KEY
+}
+
+
+repositories {
+	flatDir {
+		dirs 'libs'
+	}
+ }
+
+compileJava {
+	options.compilerArgs << '-parameters'
+	//options.fork = true
+	//options.forkOptions.executable = 'javac'
+}
+
+
+
+dependencies {
+
+
+	compile 'io.core9:core-api:+'
+
+
+	// this is here only because of the json stuff in RestRequestImpl
+	compile 'io.core9:module-hostmanager:+'
+	compile 'io.core9:module-server:+'
+	testCompile 'io.core9:module-server-undertow:+'
+
+
+  // JSON-LD
+  compile 'com.github.jsonld-java:jsonld-java:0.5.1'
+
+  // JSON
+  compile 'com.fasterxml.jackson.core:jackson-core:2.5.1'
+  compile 'com.fasterxml.jackson.core:jackson-databind:2.5.1'
+  compile 'com.fasterxml.jackson.core:jackson-annotations:2.5.1'
+
+  // http client
+  compile 'org.apache.httpcomponents:httpclient:4.4'
+
+
+	testCompile 'io.core9:core:1.0.27'
+}
