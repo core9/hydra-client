@@ -1,4 +1,4 @@
-package io.core9.hydra;
+package io.core9.hydra.client;
 
 import net.minidev.json.JSONObject;
 

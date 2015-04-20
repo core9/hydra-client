@@ -1,4 +1,4 @@
-package io.core9.hydra;
+package io.core9.hydra.client;
 
 import net.minidev.json.JSONObject;
 
@@ -10,9 +10,12 @@ public class ApiDocumentationImpl implements ApiDocumentation {
 	private String title;
 	private String description;
 
+	private String id;
+	private String type;
+
 	private SupportedClasses supportedClass = new SupportedClassesImpl();
 
-	private StatusCodes statusCodes;
+	private StatusCodes statusCodes = new StatusCodesImpl();
 
 	public ApiDocumentationImpl() {
 
@@ -78,6 +81,26 @@ public class ApiDocumentationImpl implements ApiDocumentation {
 
 	@Override
 	public void addStatusCodes(StatusCodes statusCodes) {
-		this.statusCodes = statusCodes;
+		this.statusCodes.add(statusCodes);
+	}
+
+	@Override
+	public String getId() {
+		return id;
+	}
+
+	@Override
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	@Override
+	public String getType() {
+		return type;
+	}
+
+	@Override
+	public void setType(String type) {
+		this.type = type;
 	}
 }

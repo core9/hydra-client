@@ -1,4 +1,4 @@
-package io.core9.hydra;
+package io.core9.hydra.client;
 
 import net.minidev.json.JSONObject;
 
@@ -29,5 +29,13 @@ public interface ApiDocumentation {
 	StatusCodes getStatusCodes();
 
 	void addStatusCodes(StatusCodes statusCodes);
+
+	String getId();
+
+	void setId(String id);
+
+	String getType();
+
+	void setType(String type);
 
 }
