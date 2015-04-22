@@ -5,20 +5,7 @@ import java.util.List;
 
 import net.minidev.json.JSONObject;
 
-/*
- * "@context": "http://www.w3.org/ns/hydra/context.jsonld",
- "@id": "http://api.example.com/doc/",
- "@type": "ApiDocumentation",
- "title": "The name of the API",
- "description": "A short description of the API",
- "entrypoint": "URL of the API's main entry point",
- "supportedClass": [
- ... Classes known to be supported by the Web API ...
- ],
- "possibleStatus": [
- ... Statuses that should be expected and handled properly ...
- ]
- */
+
 
 public class ApiDocumentationImpl implements ApiDocumentation {
 
