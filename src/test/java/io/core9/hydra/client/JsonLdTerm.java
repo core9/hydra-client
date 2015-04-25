@@ -6,6 +6,8 @@ public interface JsonLdTerm {
 
 	void setContext(JsonLdContext context);
 
+	String getName();
+
 
 
 }

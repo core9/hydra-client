@@ -1,8 +1,19 @@
 package io.core9.hydra.client;
 
+import java.util.Map;
+
 public class JsonLdContextImpl implements JsonLdContext {
 
-	public JsonLdContextImpl(String context, String iri) {
+	private Map<String, JsonLdTerm> context;
+	private String iri;
+
+	public JsonLdContextImpl(JsonLdTerm term) {
+		this.context.put(term.getName(), term);
+	}
+
+
+
+	public JsonLdContextImpl(String string, String string2) {
 		// TODO Auto-generated constructor stub
 	}
 
